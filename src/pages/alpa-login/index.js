@@ -12,6 +12,17 @@ window.addEventListener('DOMContentLoaded', () => {
     })
 
     login.addEventListener('click', () => {
+        const loader = login.querySelector('svg')
+        const text = login.querySelector('span')
+
+        loader.classList.remove('opacity-0')
+        text.classList.add('opacity-0')
+
+        setTimeout(() => {
+            loader.classList.add('opacity-0')
+            text.classList.remove('opacity-0')
+        }, 1000)
+
         console.log('Submit the username & password.')
     })
 })

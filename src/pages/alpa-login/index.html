@@ -52,11 +52,11 @@
             </div>
         </header>
 
-        <main class="flex h-full text-dark">
+        <main class="flex justify-center items-center h-full text-dark">
             <!-- login form -->
-            <div class="w-1/2 flex flex-col justify-center items-center">
+            <div class="flex-col justify-center items-end">
                 <div class="flex flex-col space-y-4 max-w-md">
-                    <h1 class="text-4xl font-bold">Log in</h1>
+                    <h1 class="text-4xl font-bold lg:text-5xl">Log in</h1>
                     <p>
                         Welcome to
                         <a class="text-brand" href="https://github.com/vsnthdev/alpa" target="_blank" rel="noopener"
@@ -67,17 +67,18 @@
                         <div class="flex items-center">
                             <label class="mr-auto" for="username">Username</label>
                             <input
-                                class="outline-none border-2 border-brand rounded-md w-72 text-dark px-4 py-2"
+                                class="transition-colors outline-none bg-red-100 border-2 border-red-50 border-b-red-300 rounded-md w-72 text-dark px-4 py-2 focus:bg-white focus:border-2 focus:border-brand placeholder:text-red-300"
                                 type="text"
                                 name="username"
                                 id="username"
                                 placeholder="Username"
+                                autofocus
                             />
                         </div>
                         <div class="flex items-center">
                             <label class="mr-auto" for="password">Password</label>
                             <input
-                                class="outline-none border-2 border-brand rounded-md w-72 text-dark px-4 py-2"
+                                class="transition-colors outline-none bg-red-100 border-2 border-red-50 border-b-red-300 rounded-md w-72 text-dark px-4 py-2 focus:bg-white focus:border-2 focus:border-brand placeholder:text-red-300"
                                 type="password"
                                 name="password"
                                 id="password"
@@ -85,30 +86,28 @@
                             />
                         </div>
                     </form>
-                    <div class="flex justify-end text-brand pt-4">
-                        <a href="#">Forgot password?</a>
-                    </div>
                     <div class="pt-4">
                         <hr class="border-[1px] border-brand mx-8 opacity-10" />
                     </div>
-                    <div class="flex justify-between items-center px-8 pt-4">
-                        <div>
-                            <input type="checkbox" name="remember" id="remember" />
-                            <label for="remember">Remember me</label>
-                        </div>
-                        <button id="login" class="bg-brand text-white font-bold flex items-center py-2 px-4 rounded-md">
-                            Log in
+                    <div class="flex justify-center items-center px-8 pt-4">
+                        <button
+                            id="login"
+                            class="relative outline-none bg-brand text-white font-bold flex items-center py-2 px-4 rounded-md ring-rose-500 active:bg-rose-600 hover:bg-rose-500 focus:ring-offset-2 focus:ring"
+                        >
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="h-8 w-8 absolute left-6 opacity-0 transition-opacity"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                            >
+                                <path
+                                    d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z"
+                                />
+                            </svg>
+                            <span class="transition-opacity">Log in</span>
                         </button>
                     </div>
-                    <div class="flex justify-center items-center py-8">
-                        <p>Don't have an account? <a href="#" class="text-brand">Sign up!</a></p>
-                    </div>
                 </div>
-            </div>
-
-            <!-- artwork -->
-            <div class="w-1/2 flex justify-center items-center">
-                <h1>Artwork</h1>
             </div>
         </main>
     </body>
