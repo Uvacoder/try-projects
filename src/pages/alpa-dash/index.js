@@ -26,7 +26,7 @@ window.addEventListener('DOMContentLoaded', () => {
             if (Boolean(e.target.value)) {
                 text.textContent = 'Quick create'
             } else {
-                text.textContent = 'Create'
+                text.textContent = 'Full create'
             }
         }
     })

@@ -23,17 +23,23 @@
             href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;500;600;700&family=Red+Hat+Mono:wght@400;500&display=swap"
         />
 
+        <style>
+            ::selection {
+                background-color: #e0f2fe;
+            }
+        </style>
+
         <script src="https://unpkg.com/alpinejs" defer></script>
         <script src="./index.js"></script>
     </head>
-    <body class="bg-slate-50 flex flex-col font-body h-full">
-        <section class="flex flex-col bg-slate-100 py-24">
+    <body class="bg-slate-100 flex flex-col font-body h-full">
+        <section class="flex flex-col bg-slate-200 py-24">
             <div class="mb-8 flex justify-center">
                 <input
-                    class="transition-colors outline-none bg-slate-100 border-2 border-slate-50 border-b-blue-300 rounded-md w-72 px-4 py-2 focus:bg-white focus:border-2 focus:border-sky-500 placeholder:text-slate-400 lg:w-[33rem]"
+                    class="transition-colors outline-none bg-slate-50 border-2 border-slate-200 border-b-blue-300 rounded-md w-72 px-4 py-2 focus:bg-white focus:border-2 focus:border-sky-500 placeholder:text-slate-400 md:w-[33rem]"
                     type="text"
                     id="quickCreate"
-                    placeholder="Paste link to shorten quickly"
+                    placeholder="Paste link to shorten quickly or search"
                     autofocus
                 />
             </div>
@@ -52,13 +58,13 @@
                             d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z"
                         />
                     </svg>
-                    <span class="transition-opacity">Create</span>
+                    <span class="transition-opacity">Full create</span>
                 </button>
             </div>
         </section>
         <main>
             <div class="py-24 container mx-auto flex flex-col items-center">
-                <h1 class="text-3xl font-semibold mb-16">Recently created</h1>
+                <h1 class="text-3xl font-semibold mb-16 md:text-4xl">Recently created</h1>
                 <div class="flex flex-col w-full max-w-3xl px-8 items-center space-y-8">
                     <div class="bg-white w-full p-8 rounded-lg flex flex-col">
                         <code class="font-mono font-medium text-xl mb-1">code</code>
