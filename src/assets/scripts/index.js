@@ -18,7 +18,7 @@ const main = async () => {
     const { data } = await octokit.rest.repos.getContent({
         owner: 'vsnthdev',
         repo: 'try',
-        path: '/src',
+        path: '/src/pages',
     })
 
     const hidden = ['index']
@@ -49,7 +49,7 @@ const main = async () => {
 
         const { data: contents } = await axios({
             method: 'GET',
-            url: `https://raw.githubusercontent.com/vsnthdev/try/main/src/${folder.name}/src/index.html`,
+            url: `https://raw.githubusercontent.com/vsnthdev/try/main/src/pages/${folder.name}/index.html`,
         })
 
         const parser = new DOMParser()
