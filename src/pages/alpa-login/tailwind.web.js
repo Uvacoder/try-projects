@@ -1,7 +1,7 @@
 tailwind.config = {
     theme: {
         fontFamily: {
-            body: ['Readex Pro', 'sans-serif'],
+            body: ['Kumbh Sans', 'sans-serif'],
             mono: ['Red Hat Mono', 'monospace'],
         },
         extend: {
