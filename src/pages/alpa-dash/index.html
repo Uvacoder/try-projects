@@ -109,5 +109,63 @@
                 </div>
             </nav>
         </aside>
+
+        <!-- vertical contents -->
+        <div class="w-full flex flex-col p-6 md:pt-8">
+            <!-- the header -->
+            <header class="w-full">
+                <div class="flex items-center justify-between container mx-auto">
+                    <!-- search box -->
+                    <div
+                        class="flex-grow max-w-2xl py-2 px-3 bg-white border-2 border-gray-200 flex items-center space-x-3 rounded-xl transition-all group focus-within:shadow"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="transition-colors h-6 aspect-square group-focus-within:text-primary"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                            />
+                        </svg>
+                        <input
+                            type="text"
+                            class="w-full outline-none"
+                            placeholder="Search codes, tags and URLs"
+                            autocapitalize="off"
+                            autocomplete="off"
+                            autofocus="off"
+                        />
+                    </div>
+
+                    <!-- user profile -->
+                    <a href="#" class="ml-4">
+                        <div class="flex items-center text-lg space-x-3">
+                            <img class="h-8 rounded-full" src="https://api.vsnth.dev?avatar=true" alt="Profile" />
+                            <div class="hidden items-center space-x-2 lg:flex">
+                                <p>Vasanth</p>
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    class="h-5 w-5"
+                                    viewBox="0 0 20 20"
+                                    fill="currentColor"
+                                >
+                                    <path
+                                        fill-rule="evenodd"
+                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                        clip-rule="evenodd"
+                                    />
+                                </svg>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </header>
+        </div>
     </body>
 </html>
