@@ -25,10 +25,16 @@
         <!-- TailwindCSS -->
         <script src="https://cdn.tailwindcss.com"></script>
         <script type="module" src="./tailwind.web.js"></script>
+        <style>
+            * {
+                -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+                -webkit-tap-highlight-color: transparent;
+            }
+        </style>
     </head>
     <body class="bg-gray-100 h-full flex">
         <!-- the side menu -->
-        <aside class="bg-white h-full px-4 py-8 border-r-2 border-gray-200 flex flex-col items-center space-y-10">
+        <aside class="bg-white h-full px-4 py-8 flex flex-col items-center space-y-10">
             <!-- logo -->
             <a href="#" class="text-secondary transition-colors hover:text-primary">
                 <svg class="h-6 aspect-square" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 462 490">
@@ -59,7 +65,7 @@
                 <a href="#" class="transition-colors p-2 rounded-xl hover:bg-gray-100 hover:text-primary">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        class="h-6 aspect-square"
+                        class="h-5 aspect-square md:h-6"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
@@ -77,7 +83,7 @@
                 <a href="#" class="transition-colors p-2 rounded-xl hover:bg-gray-100 hover:text-primary">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        class="h-6 aspect-square"
+                        class="h-5 aspect-square md:h-6"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
@@ -93,11 +99,11 @@
                 </a>
 
                 <!-- create a new short link -->
-                <div class="flex pt-4">
+                <div class="flex justify-center pt-4">
                     <a href="#" class="bg-primary text-white transition-colors p-2.5 rounded-xl hover:bg-primary/50">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
-                            class="h-5 aspect-square"
+                            class="h-4 aspect-square"
                             fill="none"
                             viewBox="0 0 24 24"
                             stroke="currentColor"
@@ -114,14 +120,14 @@
         <div class="w-full flex flex-col p-6 md:pt-8">
             <!-- the header -->
             <header class="w-full">
-                <div class="flex items-center justify-between container mx-auto">
+                <div class="flex items-center justify-between container mx-auto md:px-12">
                     <!-- search box -->
                     <div
-                        class="flex-grow max-w-2xl py-2 px-3 bg-white border-2 border-gray-200 flex items-center space-x-3 rounded-xl transition-all group focus-within:shadow"
+                        class="flex-grow max-w-2xl py-2 px-3 bg-white border border-gray-200 flex items-center space-x-3 rounded-xl transition-all group focus-within:shadow"
                     >
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
-                            class="transition-colors h-6 aspect-square group-focus-within:text-primary"
+                            class="transition-colors h-6 aspect-square text-gray-400 group-focus-within:text-primary"
                             fill="none"
                             viewBox="0 0 24 24"
                             stroke="currentColor"
@@ -166,6 +172,321 @@
                     </a>
                 </div>
             </header>
+
+            <!-- page's main content -->
+            <main class="my-4 md:my-12">
+                <div class="flex flex-col container mx-auto md:px-14">
+                    <!-- user heading -->
+                    <h3 class="hidden font-medium text-gray-400 text-3xl md:inline lg:text-4xl">
+                        Welcome back, Vasanth!
+                    </h3>
+
+                    <div class="mt-4 bg-white border border-gray-200 rounded-xl md:mt-8 lg:mt-10">
+                        <p class="pt-10 pb-2 px-6 text-gray-600 md:text-lg lg:px-12">Your recently created links</p>
+                        <div class="mx-6 mb-6 lg:mx-12">
+                            <table class="w-full table-fixed text-left">
+                                <thead class="text-gray-600">
+                                    <tr>
+                                        <th class="font-semibold p-4">Code</th>
+                                        <th class="font-semibold p-4">Clicks</th>
+                                        <th class="font-semibold p-4">Created on</th>
+                                        <th class="font-semibold p-4">Targets</th>
+                                        <th class="font-semibold p-4"></th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-gray-500">
+                                    <tr class="border-t border-gray-200 transition-colors hover:bg-gray-100">
+                                        <td class="p-4">rmhj</td>
+                                        <td class="p-4">560</td>
+                                        <td class="p-4">1st Jan, 1970</td>
+                                        <td class="p-4">5</td>
+                                        <td class="p-4">
+                                            <a
+                                                href="#"
+                                                class="inline-flex text-sm rounded-full text-primary bg-primary/5 transition-colors px-2 py-1 hover:bg-primary/10"
+                                            >
+                                                <span class="ml-2">View details</span>
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    class="h-5 aspect-square"
+                                                    viewBox="0 0 20 20"
+                                                    fill="currentColor"
+                                                >
+                                                    <path
+                                                        fill-rule="evenodd"
+                                                        d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                                                        clip-rule="evenodd"
+                                                    />
+                                                </svg>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr class="border-t border-gray-200 transition-colors hover:bg-gray-100">
+                                        <td class="p-4">erwz</td>
+                                        <td class="p-4">23,856</td>
+                                        <td class="p-4">2nd Feb, 2022</td>
+                                        <td class="p-4">5</td>
+                                        <td class="p-4">
+                                            <a
+                                                href="#"
+                                                class="inline-flex text-sm rounded-full text-primary bg-primary/5 transition-colors px-2 py-1 hover:bg-primary/10"
+                                            >
+                                                <span class="ml-2">View details</span>
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    class="h-5 aspect-square"
+                                                    viewBox="0 0 20 20"
+                                                    fill="currentColor"
+                                                >
+                                                    <path
+                                                        fill-rule="evenodd"
+                                                        d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                                                        clip-rule="evenodd"
+                                                    />
+                                                </svg>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr class="border-t border-gray-200 transition-colors hover:bg-gray-100">
+                                        <td class="p-4">twitter</td>
+                                        <td class="p-4">9,26,749</td>
+                                        <td class="p-4">5th Feb, 2022</td>
+                                        <td class="p-4">5</td>
+                                        <td class="p-4">
+                                            <a
+                                                href="#"
+                                                class="inline-flex text-sm rounded-full text-primary bg-primary/5 transition-colors px-2 py-1 hover:bg-primary/10"
+                                            >
+                                                <span class="ml-2">View details</span>
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    class="h-5 aspect-square"
+                                                    viewBox="0 0 20 20"
+                                                    fill="currentColor"
+                                                >
+                                                    <path
+                                                        fill-rule="evenodd"
+                                                        d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                                                        clip-rule="evenodd"
+                                                    />
+                                                </svg>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr class="border-t border-gray-200 transition-colors hover:bg-gray-100">
+                                        <td class="p-4">sqkf</td>
+                                        <td class="p-4">4,473</td>
+                                        <td class="p-4">7th Feb, 2022</td>
+                                        <td class="p-4">5</td>
+                                        <td class="p-4">
+                                            <a
+                                                href="#"
+                                                class="inline-flex text-sm rounded-full text-primary bg-primary/5 transition-colors px-2 py-1 hover:bg-primary/10"
+                                            >
+                                                <span class="ml-2">View details</span>
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    class="h-5 aspect-square"
+                                                    viewBox="0 0 20 20"
+                                                    fill="currentColor"
+                                                >
+                                                    <path
+                                                        fill-rule="evenodd"
+                                                        d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                                                        clip-rule="evenodd"
+                                                    />
+                                                </svg>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr class="border-t border-gray-200 transition-colors hover:bg-gray-100">
+                                        <td class="p-4">9EFFu</td>
+                                        <td class="p-4">600</td>
+                                        <td class="p-4">14th Feb, 2022</td>
+                                        <td class="p-4">5</td>
+                                        <td class="p-4">
+                                            <a
+                                                href="#"
+                                                class="inline-flex text-sm rounded-full text-primary bg-primary/5 transition-colors px-2 py-1 hover:bg-primary/10"
+                                            >
+                                                <span class="ml-2">View details</span>
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    class="h-5 aspect-square"
+                                                    viewBox="0 0 20 20"
+                                                    fill="currentColor"
+                                                >
+                                                    <path
+                                                        fill-rule="evenodd"
+                                                        d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                                                        clip-rule="evenodd"
+                                                    />
+                                                </svg>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr class="border-t border-gray-200 transition-colors hover:bg-gray-100">
+                                        <td class="p-4">praveen</td>
+                                        <td class="p-4">23</td>
+                                        <td class="p-4">18th Feb, 2022</td>
+                                        <td class="p-4">5</td>
+                                        <td class="p-4">
+                                            <a
+                                                href="#"
+                                                class="inline-flex text-sm rounded-full text-primary bg-primary/5 transition-colors px-2 py-1 hover:bg-primary/10"
+                                            >
+                                                <span class="ml-2">View details</span>
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    class="h-5 aspect-square"
+                                                    viewBox="0 0 20 20"
+                                                    fill="currentColor"
+                                                >
+                                                    <path
+                                                        fill-rule="evenodd"
+                                                        d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                                                        clip-rule="evenodd"
+                                                    />
+                                                </svg>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr class="border-t border-gray-200 transition-colors hover:bg-gray-100">
+                                        <td class="p-4">topl</td>
+                                        <td class="p-4">16,764</td>
+                                        <td class="p-4">18th Feb, 2022</td>
+                                        <td class="p-4">2</td>
+                                        <td class="p-4">
+                                            <a
+                                                href="#"
+                                                class="inline-flex text-sm rounded-full text-primary bg-primary/5 transition-colors px-2 py-1 hover:bg-primary/10"
+                                            >
+                                                <span class="ml-2">View details</span>
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    class="h-5 aspect-square"
+                                                    viewBox="0 0 20 20"
+                                                    fill="currentColor"
+                                                >
+                                                    <path
+                                                        fill-rule="evenodd"
+                                                        d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                                                        clip-rule="evenodd"
+                                                    />
+                                                </svg>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr class="border-t border-gray-200 transition-colors hover:bg-gray-100">
+                                        <td class="p-4">discord</td>
+                                        <td class="p-4">7,999</td>
+                                        <td class="p-4">18th Feb, 2022</td>
+                                        <td class="p-4">5</td>
+                                        <td class="p-4">
+                                            <a
+                                                href="#"
+                                                class="inline-flex text-sm rounded-full text-primary bg-primary/5 transition-colors px-2 py-1 hover:bg-primary/10"
+                                            >
+                                                <span class="ml-2">View details</span>
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    class="h-5 aspect-square"
+                                                    viewBox="0 0 20 20"
+                                                    fill="currentColor"
+                                                >
+                                                    <path
+                                                        fill-rule="evenodd"
+                                                        d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                                                        clip-rule="evenodd"
+                                                    />
+                                                </svg>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr class="border-t border-gray-200 transition-colors hover:bg-gray-100">
+                                        <td class="p-4">diwalisale</td>
+                                        <td class="p-4">5,679</td>
+                                        <td class="p-4">22nd Feb, 2022</td>
+                                        <td class="p-4">32</td>
+                                        <td class="p-4">
+                                            <a
+                                                href="#"
+                                                class="inline-flex text-sm rounded-full text-primary bg-primary/5 transition-colors px-2 py-1 hover:bg-primary/10"
+                                            >
+                                                <span class="ml-2">View details</span>
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    class="h-5 aspect-square"
+                                                    viewBox="0 0 20 20"
+                                                    fill="currentColor"
+                                                >
+                                                    <path
+                                                        fill-rule="evenodd"
+                                                        d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                                                        clip-rule="evenodd"
+                                                    />
+                                                </svg>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr class="border-t border-gray-200 transition-colors hover:bg-gray-100">
+                                        <td class="p-4">october</td>
+                                        <td class="p-4">23,153</td>
+                                        <td class="p-4">23rd Feb, 2022</td>
+                                        <td class="p-4">1</td>
+                                        <td class="p-4">
+                                            <a
+                                                href="#"
+                                                class="inline-flex text-sm rounded-full text-primary bg-primary/5 transition-colors px-2 py-1 hover:bg-primary/10"
+                                            >
+                                                <span class="ml-2">View details</span>
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    class="h-5 aspect-square"
+                                                    viewBox="0 0 20 20"
+                                                    fill="currentColor"
+                                                >
+                                                    <path
+                                                        fill-rule="evenodd"
+                                                        d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                                                        clip-rule="evenodd"
+                                                    />
+                                                </svg>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr class="border-t border-gray-200 transition-colors hover:bg-gray-100">
+                                        <td class="p-4">app</td>
+                                        <td class="p-4">320</td>
+                                        <td class="p-4">3rd Mar, 2022</td>
+                                        <td class="p-4">27</td>
+                                        <td class="p-4">
+                                            <a
+                                                href="#"
+                                                class="inline-flex text-sm rounded-full text-primary bg-primary/5 transition-colors px-2 py-1 hover:bg-primary/10"
+                                            >
+                                                <span class="ml-2">View details</span>
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    class="h-5 aspect-square"
+                                                    viewBox="0 0 20 20"
+                                                    fill="currentColor"
+                                                >
+                                                    <path
+                                                        fill-rule="evenodd"
+                                                        d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                                                        clip-rule="evenodd"
+                                                    />
+                                                </svg>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </main>
         </div>
     </body>
 </html>
